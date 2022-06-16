@@ -1,0 +1,15 @@
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #94afe1;
+        accent-color: #2f3a4d;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #2f3a4d;
+        accent-color: #94afe1;
+    }
+}
+#welcome {
+    text-align: center;
+}

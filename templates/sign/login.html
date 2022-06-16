@@ -1,0 +1,63 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Login - </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="../favicon.png">
+</head>
+
+<body>
+
+    </div>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <div class="login-area login-s2">
+        <div class="container">
+            <div class="login-box ptb--100">
+                <form method="POST" action="/">
+                    {%if ErrorTitle%}
+                     <div class="alert-dismiss">
+                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>{{ErrorTitle}}</strong> {{ErrorMessage}}
+                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                  <span class="fa fa-times"></span>
+                                </button>
+                          </div>
+                     </div>
+                    {%endif%}
+                    <div class="login-form-head">
+                        <h4>로그인</h4>
+                        <p>화끈한 코인의 세상에 뛰어들 준비가 됐나요? </p>
+                    </div>
+                    <div class="login-form-body">
+                        <div class="form-gp">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username" required>
+                            <i class="ti-user"></i>
+                            <div class="text-danger"></div>
+                        </div>
+                        <div class="form-gp">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" required>
+                            <i class="ti-lock"></i>
+                            <div class="text-danger"></div>
+                        </div>
+                        <div class="submit-btn-area">
+                            <button id="form_submit" type="submit">확인 <i class="ti-arrow-right"></i></button>
+                        </div>
+                        <div style="padding:1px;">아직 회원이 아니시라고요? </div>
+                        <div class="submit-btn-area">
+                            <button id="sign_up" type="button" onClick="location.href='/register'">회원 가입</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
