@@ -86,6 +86,7 @@ def register():
         else:
             return render_template(HTML_PATH_REGISTER, ErrorTitle="ERROR! ", ErrorMessage="Username already exist")
 
+#로그아웃
 @app.route('/logout', methods=['GET'])
 def logout():
     session.pop('user', None)
