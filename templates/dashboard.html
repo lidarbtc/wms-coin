@@ -10,6 +10,11 @@
 <body>
     <h1>loged in</h1><br>
     <b>코인개수: {{countcoin}} 개</b>
+    {% if countcoin == "0" %}
+    <div>유 헤브 머니 노</div>
+    {% else %}
+    <div>유 리치</div>
+    {% endif %}
     <div class="col-sm-6 clearfix">
         <div class="user-profile pull-right">
             <h4 class="user-name dropdown-toggle" data-toggle="dropdown">{{username}} <i class="fa fa-angle-down"></i></h4>

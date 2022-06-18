@@ -7,7 +7,7 @@ CREATE TABLE usertbl(
 ) ENGINE=INNODB;
 
 INSERT INTO usertbl
-(userid, userpw)
-VALUES('admin', '1234');
+(userid, userpw, countcoin)
+VALUES('admin', '1234'), '0';
 
 select * from usertbl;

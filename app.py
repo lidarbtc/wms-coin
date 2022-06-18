@@ -56,7 +56,6 @@ def login():
     elif request.method =='POST':
         userid = request.form.get('username')
         userpw = request.form.get('password')
-
         data = db_connector(f'''SELECT userid, countcoin FROM usertbl WHERE userid="{userid}" AND userpw="{userpw}";''')
         print(data)
         if data == "":
