@@ -8,6 +8,6 @@ CREATE TABLE usertbl(
 
 INSERT INTO usertbl
 (userid, userpw, countcoin)
-VALUES('admin', '1234'), '0';
+VALUES('admin', '1234', '0');
 
 select * from usertbl;
