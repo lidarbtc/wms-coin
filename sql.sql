@@ -1,4 +1,4 @@
---CREATE DATABASE wmscoin default CHARACTER SET UTF8;
+
 use wmscoin;
 CREATE TABLE usertbl(
     userid VARCHAR(45) PRIMARY KEY NOT NULL,
