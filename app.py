@@ -1,3 +1,6 @@
+from itertools import count
+import re
+from this import s
 from flask import *
 import sqlite3
 import dbdb
@@ -15,7 +18,7 @@ HTML_PATH_REGISTER = './sign/register.html'
 HTML_PATH_DASHBOARD = './dashboard.html'
 HTML_PATH_403 = './error/403.html'
 HTML_PATH_404 = './error/404.html'
-
+HTML_PATH_CHART = './chart.html'
 #DB 연결
 def db_connector(sql_command):
     MYSQL_DB = {
@@ -70,7 +73,7 @@ def login():
 def register():
     if request.method =='GET':
         if checklogin():
-            return render_template(HTML_PATH_DASHBOARD, username=session['user'], countcoin=session['countcoin'])
+            return render_template(HTML_PATH_REGISTER, username=session['user'], countcoin=session['countcoin'])
         return render_template(HTML_PATH_REGISTER)
     elif request.method =='POST':
         userid = request.form.get('username')
@@ -93,6 +96,3 @@ def logout():
 
 if __name__ == '__main__':
     app.run(host="localhost", port="3000",debug=False, threaded=True)
-
-
-
