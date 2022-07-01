@@ -1,10 +1,7 @@
 from itertools import count
-import re
 from this import s
 from flask import *
-import sqlite3
-import dbdb
-import pymysql, time, ssl
+import pymysql
 import threading, datetime
 
 #시작
